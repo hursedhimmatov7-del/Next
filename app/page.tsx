@@ -30,7 +30,7 @@ export default function Home() {
           <p className="mb-6 text-xs font-bold uppercase tracking-[0.35em] text-[#eaff00]">Train strong. Live better.</p>
           <h1 className="text-5xl font-extrabold leading-[1.04] tracking-tight sm:text-6xl lg:text-7xl">Free trial session <span className="text-[#eaff00]">with a trainer</span></h1>
           <p className="mt-6 max-w-lg text-base leading-7 text-white/65 sm:text-lg">Meet your coach, explore the gym, and find the training that feels right for you.</p>
-          <Link href="/membership" className="mt-9 inline-flex rounded-full bg-[#eaff00] px-8 py-3.5 text-sm font-extrabold text-black transition hover:bg-white">Book your free session <span aria-hidden="true" className="ml-3">↗</span></Link>
+          <Link href="/membership" className="mt-9 inline-flex rounded-full bg-[#eaff00] px-8 py-3.5 text-sm font-extrabold text-black transition hover:bg-white">Book your free session <span aria-hidden="true" className="ml-3"></span></Link>
         </div>
         <div className="absolute bottom-8 right-8 hidden text-xs font-semibold uppercase tracking-[0.25em] text-white/50 md:block">01 / 04</div>
       </section>
@@ -46,7 +46,7 @@ export default function Home() {
       </section>
 
       <section className="bg-[#0b0b0b] px-6 py-24 sm:px-12 lg:px-20 lg:py-28">
-        <div className="mb-12 flex flex-wrap items-end justify-between gap-5"><div><p className="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-[#eaff00]">Simple plans. Serious results.</p><h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl">Gym membership</h2></div><Link href="/membership" className="text-sm font-bold text-[#eaff00] hover:text-white">Explore all plans ↗</Link></div>
+        <div className="mb-12 flex flex-wrap items-end justify-between gap-5"><div><p className="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-[#eaff00]">Simple plans. Serious results.</p><h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl">Gym membership</h2></div><Link href="/membership" className="text-sm font-bold text-[#eaff00] hover:text-white">Explore all plans </Link></div>
         <div className="grid gap-4 md:grid-cols-3">
           {plans.map(plan => <article key={plan.name} className={`rounded-2xl border p-7 ${plan.featured ? "border-[#eaff00] bg-[#eaff00] text-black" : "border-white/10 bg-[#161616]"}`}>
             <p className={`text-xs font-extrabold tracking-[0.25em] ${plan.featured ? "text-black/60" : "text-[#eaff00]"}`}>{plan.name}</p><p className="mt-6 text-4xl font-extrabold">${plan.price}<span className={`ml-1 text-sm font-medium ${plan.featured ? "text-black/60" : "text-white/45"}`}>/ month</span></p>
@@ -62,7 +62,7 @@ export default function Home() {
       </section>
 
       <section className="px-6 py-24 sm:px-12 lg:px-20 lg:py-28">
-        <div className="mb-12 flex flex-wrap items-end justify-between gap-5"><div><p className="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-[#eaff00]">Good people. Great coaching.</p><h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl">Meet your trainers</h2></div><Link href="/about" className="text-sm font-bold text-[#eaff00] hover:text-white">Meet the team ↗</Link></div>
+        <div className="mb-12 flex flex-wrap items-end justify-between gap-5"><div><p className="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-[#eaff00]">Good people. Great coaching.</p><h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl">Meet your trainers</h2></div><Link href="/about" className="text-sm font-bold text-[#eaff00] hover:text-white">Meet the team </Link></div>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-5">{trainers.map(trainer => <article key={trainer.name} className="overflow-hidden rounded-xl border border-white/10 bg-[#141414]"><div className="aspect-[4/5] bg-cover bg-center" style={{ backgroundImage: `url(https://images.unsplash.com/${trainer.image}?auto=format&fit=crop&w=600&q=80)` }} /><div className="p-4 sm:p-5"><h3 className="text-xs font-extrabold tracking-wide sm:text-sm">{trainer.name}</h3><p className="mt-2 text-[11px] text-white/45 sm:text-xs">{trainer.focus}</p></div></article>)}</div>
       </section>
     </main>
